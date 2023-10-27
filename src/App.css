@@ -130,3 +130,12 @@ button[disabled] {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
 }
+
+textarea {
+  font-size: 0.9em;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: vertical;
+}
