@@ -63,7 +63,7 @@ function App() {
         try {
             setTranscriptionStatus({loading: true, text: null});
 
-            const response = await fetch(`http://${backendUrl}:8080/transcribe/start`, {
+            const response = await fetch(`https://${backendUrl}:8080/transcribe/start`, {
                 method: "POST",
                 body: formData,
             });
@@ -77,7 +77,7 @@ function App() {
             const pollingInterval = 300;
 
             async function checkStatus() {
-                const statusResponse = await fetch(`http://${backendUrl}:8080/transcribe/status?jobId=${jobId}`);
+                const statusResponse = await fetch(`https://${backendUrl}:8080/transcribe/status?jobId=${jobId}`);
 
                 if (!statusResponse.ok) {
                     setTranscriptionStatus({loading: false, text: "Error occurred: " + statusResponse.status});
